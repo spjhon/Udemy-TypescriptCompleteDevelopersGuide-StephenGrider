@@ -1,0 +1,27 @@
+{
+  "name": "udemy-typescriptcompletedevelopersguide-stephengrider",
+  "version": "1.0.0",
+  "description": "Typescript by grider",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spjhon/Udemy-TypescriptCompleteDevelopersGuide-StephenGrider.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "Camilo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spjhon/Udemy-TypescriptCompleteDevelopersGuide-StephenGrider/issues"
+  },
+  "homepage": "https://github.com/spjhon/Udemy-TypescriptCompleteDevelopersGuide-StephenGrider#readme",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  }
+}

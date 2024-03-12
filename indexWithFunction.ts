@@ -5,7 +5,7 @@ const url = 'https://jsonplaceholder.typicode.com/todos/1';
 //Entonces para prevenir esos errores vamos a aplicar algo de typescript para protejer 
 // la forma en que se utiliza el flujo de datos
 
-//Esta es una interface, lo que hace es para definir la estructura de un objeto
+//Esta es una INTERFACE, lo que hace es para definir la estructura de un objeto
 interface Todo {
   id: number;
   title: string;
@@ -23,18 +23,17 @@ axios.get(url).then((response) => {
   const finished = todo.completed;
 
 //en esta funcion se muestra otro ejemplo de como typescript ayuda a definir por ejemplo los correctos
-//parametros de la funcion
+//parametros de la funcion diciendo que sus valores pueden ser any y eso es malo
 
-const logTodo = (id, title, completed) => {
-  console.log(`
-  The Todo with ID: ${ID}
-  Has a title of: ${title}
-  Is it finished? ${finished}
-`);
-}
-
-  
+logTodo(ID, title, finished); //Typescript mira inclusive el orden de los argumentos
 });
 
+const logTodo = (id: number, title: string, completed: boolean) => { //con el :number se le esta diciendo que type entra en cada parametro
+  console.log(`
+  The Todo with ID: ${id}
+  Has a title of: ${title}
+  Is it finished? ${completed}
+`);
+}
 //en este archivo se puede apreciar que hay errores que no se ven sino hasta que se ejecuta el programa
 //
